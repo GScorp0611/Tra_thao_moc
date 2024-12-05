@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng trà thảo mộc</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Thêm Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    
+    <!-- Thêm jQuery (Slick yêu cầu jQuery) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Thêm Slick JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+    <!-- Thanh điều hướng -->
+    <nav>
+        <div class="logo">Logo</div>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="products.html">Sản phẩm</a></li>
+            <li><a href="blog.html">Bài viết</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Trang chủ -->
+    <section id="home" class="section home"
+        style="background-image: url('D:/Web_tra_thao_moc/img/section_1.jpg'); 
+           background-size: cover; 
+           background-position: center; 
+           background-attachment: fixed; 
+           background-repeat: no-repeat; 
+           position: relative; 
+           color: #fff; 
+           padding: 60px 20px;">
+    <!-- Overlay -->
+    <div style="position: absolute; 
+                top: 0; 
+                left: 0; 
+                width: 100%; 
+                height: 100%; 
+                background-color: rgba(0, 0, 0, 0.5); 
+                z-index: 1;"></div>
+
+    <!-- Nội dung -->
+    <div style="position: relative; z-index: 2;">
+        <h1 style="color: #fff;">Chào mừng đến với cửa hàng trà thảo mộc</h1>
+        <p>Khám phá trà thảo mộc tươi ngon, giúp thư giãn và nâng cao sức khỏe.</p>
+        <button><a href="products.html">Khám phá ngay</a></button>
+    </div>
+    </section>
+
+<hr>
+
+    <!-- Sản phẩm nổi bật -->
+    <section class="featured-products">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="product-slider">
+            <div class="product-card">
+                <img src="product1.jpg" alt="Sản phẩm 1">
+                <h3>Trà sen vàng</h3>
+                <p>Giới thiệu trà sen vàng</p>
+                <a href="products.html">Xem chi tiết</a>
+            </div>
+            <div class="product-card">
+                <img src="product2.jpg" alt="Sản phẩm 2">
+                <h3>Trà hoa đậu biếc</h3>
+                <p>Giới thiệu trà hoa đậu biếc</p>
+                <a href="products.html">Xem chi tiết</a>
+            </div>
+            <div class="product-card">
+                <img src="product3.jpg" alt="Sản phẩm 3">
+                <h3>Trà hoa cúc</h3>
+                <p>Giới thiệu trà hoa cúc</p>
+                <a href="products.html">Xem chi tiết</a>
+            </div>
+            <div class="product-card">
+                <img src="product4.jpg" alt="Sản phẩm 4">
+                <h3>Trà hoa atiso đỏ</h3>
+                <p>Giới thiệu trà hoa atiso đỏ</p>
+                <a href="products.html">Xem chi tiết</a>
+            </div>
+            <div class="product-card">
+                <img src="product5.jpg" alt="Sản phẩm 5">
+                <h3>Trà hạt sen</h3>
+                <p>Giới thiệu trà hạt sen</p>
+                <a href="products.html">Xem chi tiết</a>
+            </div>
+            <div class="product-card">
+                <img src="product6.jpg" alt="Sản phẩm 6">
+                <h3>Trà hoa lài</h3>
+                <p>Giới thiệu trà hoa lài</p>
+                <a href="products.html">Xem chi tiết</a>
+            </div>
+        </div>
+    </section>
+    
+<hr>
+
+    <!-- Layer 1: Blog  -->
+    <section id="blog" class="section blog">
+        <h2 style="color: #000;">Bài viết của chúng tôi</h2>
+        <div class="blog-posts">
+            <div class="post">
+                <h3>Lợi ích của trà thảo mộc</h3>
+                <p>Khám phá những lợi ích tuyệt vời mà trà thảo mộc mang lại cho sức khỏe...</p>
+                <button><a href="blog1.html">Đọc thêm</a></button>
+            </div>
+            <div class="post">
+                <h3>Cách pha trà thảo mộc đúng cách</h3>
+                <p>Hướng dẫn chi tiết về cách pha trà để tận dụng tối đa lợi ích sức khỏe...</p>
+                <button><a href="blog2.html">Đọc thêm</a></button>
+            </div>
+        </div>
+    </section>
+
+<hr>
+
+    <!-- Layer 2: Video giới thiệu -->
+    <section id="video" class="section video">
+        <h2>Video Giới Thiệu</h2>
+        <p>Cùng khám phá hành trình của chúng tôi qua video dưới đây.</p>
+        <div style="text-align: center;">
+            <video controls width="80%" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                <source src="path-to-your-video.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video. Vui lòng cập nhật trình duyệt hoặc thử tải lại.
+            </video>
+        </div>
+    </section>
+
+<hr>
+
+    <!-- Layer 3: Liên hệ -->
+    <section id="contact" class="section contact">
+        <h2>Liên hệ với chúng tôi</h2>
+        <p>Hãy liên hệ nếu bạn có bất kỳ câu hỏi hoặc yêu cầu nào. Chúng tôi luôn sẵn sàng hỗ trợ!</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h3>Địa chỉ</h3>
+                <p>69/68 Đ. Đặng Thuỳ Trâm, Phường 13, Bình Thạnh, Hồ Chí Minh, Việt Nam</p>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <h3>Điện thoại</h3>
+                <p>+84 123 456 789</p>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <h3>Email</h3>
+                <p>trucmai@gmail.com</p>
+            </div>
+        </div>
+        <div style="margin-top: 20px;">
+            <h3>Gửi tin nhắn</h3>
+            <form action="submit_contact_form.php" method="POST" style="max-width: 500px; margin: 0 auto;">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+                    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;">
+                    
+                <label for="message">Tin nhắn:</label>
+                <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+                    
+                <button type="submit" style="padding: 10px 20px; background-color: #28a745; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Gửi</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Trà thảo mộc - Quà tặng từ thiên nhiên.</p>
+    </footer>
+
+    <!-- Thêm script để khởi tạo Slick Slider -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.product-slider').slick({
+                slidesToShow: 3,  // Hiển thị 3 sản phẩm mỗi lần
+                slidesToScroll: 1,  // Cuộn 1 sản phẩm mỗi lần
+                autoplay: true,  // Tự động cuộn
+                autoplaySpeed: 2000,  // Tốc độ cuộn (2 giây)
+                arrows: true,  // Hiển thị mũi tên điều hướng
+                dots: true,  // Hiển thị các điểm điều hướng
+                responsive: [
+                    {
+                        breakpoint: 1024,  // Khi màn hình nhỏ hơn 1024px
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 600,  // Khi màn hình nhỏ hơn 600px
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+</html>
