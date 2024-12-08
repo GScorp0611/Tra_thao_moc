@@ -259,3 +259,18 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.social-icons a img {
+    background: none; /* Xóa phông nền */
+    display: block; /* Xóa khoảng trống không mong muốn */
+    width: 40px; /* Đặt kích thước cố định */
+    height: 40px;
+    object-fit: contain; /* Hiển thị đúng kích thước ảnh */
+}
+
+.social-icons a {
+    background: none; /* Xóa nền từ thẻ a nếu có */
+    padding: 0; /* Xóa khoảng cách thừa */
+    display: inline-block;
+}
+
