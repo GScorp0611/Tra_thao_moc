@@ -14,7 +14,7 @@ body {
 }
 
 nav {
-    background-color: #2f1305;  /* Màu của thanh navbar thành nâu */
+    background-color: #000;  /* Màu của thanh navbar thành nâu */
     padding: 15px;
     display: flex;
     justify-content: space-between;
