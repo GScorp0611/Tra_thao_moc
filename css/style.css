@@ -53,7 +53,7 @@ h1, h2 {
 }
 
 button, a {
-    background-color: #f4b70d;
+    background-color: #27ae60;
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -62,7 +62,7 @@ button, a {
 }
 
 button:hover, a:hover {
-    background-color: #2ecc71;
+    background-color: #f4b70d;
 }
 
 #search {
