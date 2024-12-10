@@ -61,10 +61,6 @@ button, a {
     margin-top: 10px;
 }
 
-button:hover, a:hover {
-    background-color: #f4b70d;
-}
-
 #search {
     text-align: center;
     margin-top: 30px;
