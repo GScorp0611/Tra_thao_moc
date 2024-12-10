@@ -28,49 +28,7 @@
         </ul>
     </nav>
 
-    <!-- Phần nội dung bài viết -->
-    <main>
-        <article class="blog-post">
-            <header>
-                <h1 class="centered">CÙNG TRÀ TƯ KHÁM PHÁ BÍ QUYẾT PHA TRÀ NGON</h1>
-                <p class="date">Ngày đăng: 09/12/2024</p>
-            </header>
-
-            <section class="content">
-                <p>Từ lâu, chén trà đã gắn liền với những giá trị truyền thống, là một phần không thể thiếu trong đời sống của người Việt như sự hiếu khách, lòng tôn kính và sự tinh tế. 
-                    Việc pha trà là một nghệ thuật và thưởng trà giúp con người thư giãn, tĩnh tâm và tìm lại sự cân bằng trong cuộc sống. Tuy nhiên, để có một tách trà ngon, không chỉ cần chọn nguyên liệu tốt mà còn phải biết cách pha đúng cách. 
-                    Trong bài viết này, Trà Tư, thương hiệu trà hàng đầu, sẽ chia sẻ các mẹo pha trà hay giúp bạn tận hưởng trọn vẹn hương vị trà.</p>
-
-                <h2>1. Chọn loại trà phù hợp</h2>
-                <p>Mỗi loại trà mang một hương vị và đặc trưng riêng, dưới đây là một số loại trà giúp thư giãn và tốt cho sức khỏe của bạn:</p>
-                <ul>
-                    <li><strong>Trà Sen:</strong> Trà sen giúp làm mát cơ thể, giải nhiệt, giải độc gan, giúp thư giãn thần kinh, giảm căng thẳng, cải thiện chất lượng giấc ngủ.</li>
-                    <li><strong>Trà Gạo Lứt:</strong> Trà gạo lứt chứa nhiều chất xơ, giúp tăng cảm giác no lâu, giảm hấp thu chất béo, hỗ trợ giảm cân hiệu quả.</li>
-                    <li><strong>Trà Xanh:</strong> Mang vị thanh mát, phù hợp cho người thích nhẹ nhàng.</li>
-                    <li><strong>Trà Đinh Lăng:</strong> Đinh lăng được coi là "nhân sâm Việt Nam", có tác dụng bồi bổ cơ thể, tăng cường sức khỏe, giảm mệt mỏi.</li>
-                </ul>
-
-                <h2>2. Điều chỉnh nhiệt độ nước – Yếu tố quyết định hương vị</h2>
-                <p>Điều này giúp giữ trọn hương vị tự nhiên và những dưỡng chất quý giá từ lá trà. Dưới đây là hướng dẫn chi tiết từ Tiệm Trà Tư:</p>
-                <ul>
-                    <li><strong>Trà Sen:</strong> 85-90°C, nhiệt độ này vừa đủ để kích thích hương thơm dịu nhẹ của hoa sen, lại không làm mất đi vị ngọt thanh tự nhiên của trà.</li>
-                    <li><strong>Trà Gạo Lứt:</strong> 85-90°C, nhiệt độ này giúp giải phóng hương thơm của gạo lứt rang và tạo nên một ly trà thơm ngon, đậm đà.</li>
-                    <li><strong>Trà Xanh:</strong> 70-80°C, nếu pha quá nóng, trà sẽ dễ bị đắng và mất đi hương vị thơm mát đặc trưng.</li>
-                    <li><strong>Trà Đinh Lăng:</strong> 90-100°C, nhiệt độ cao sẽ giúp các dưỡng chất trong đinh lăng hòa tan tốt hơn, mang lại nhiều lợi ích cho sức khỏe.</li>
-                </ul>
-
-                <h2>3. Tỷ lệ trà và thời gian ủ trà hoàn hảo</h2>
-                <p>Để có một tách trà thơm ngon đúng điệu từ Tiệm Trà Tư, hãy sử dụng từ 2,5g đến 3g trà, tương đương với 1 gói trà túi lọc, cho mỗi 100ml nước sôi. Thời gian ủ trà lý tưởng là 5 phút đối với Trà Xanh và từ 7-10 phút đối với các loại trà khác.</p>
-
-                <h2>4. Thưởng trà – Nghệ thuật trong từng khoảnh khắc</h2>
-                <p>Thưởng trà không chỉ là uống mà còn là tận hưởng. Hãy chọn cho mình một không gian yên tĩnh, nơi ánh sáng dịu dàng hòa quyện cùng không khí trong lành, tạo nên bầu không khí lý tưởng để thư giãn.</p>
-
-                <p>Vì sao nên chọn Trà Tư? Nguyên liệu của Tiệm Trà Tư được tuyển chọn kỹ lưỡng từ những vùng trồng trà danh tiếng nhất Việt Nam như Thái Nguyên, Mộc Châu, Hà Giang, Tuyên Quang,...</p>
-
-            </section>
-
-        </article>
-    </main>
+    <div id="section"></div>
 
     <footer style="background-color: #000; color: #FFF; padding: 20px 0; font-family: Arial, sans-serif;">
         <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
@@ -120,5 +78,14 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        fetch('blog/SEO-2.html')
+            .then(response => response.text())
+            .then(html => {
+            document.getElementById('content').innerHTML = html;
+            })
+            .catch(err => console.warn('Lỗi:', err));
+        </script>
 </body>
 </html>
