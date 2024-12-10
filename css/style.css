@@ -10,7 +10,7 @@ body {
     font-family: 'Fraunces', sans-serif;
     line-height: 1.6;
     color: #FFF;
-    background-color: #9c5e3e;  /* Màu nền của trang web thành trắng */
+    background-color: #FAF6E3;  /* Màu nền của trang web thành trắng */
 }
 
 nav {
@@ -187,12 +187,12 @@ footer {
 .featured-products {
     text-align: center;
     padding: 40px 20px;
-    background-color: #f8f8f8;
+    background-color: #9c5e3e;
 }
 
 .featured-products h2 {
     font-size: 2em;
-    color: #333;
+    color: #FFF;
     margin-bottom: 20px;
 }
 
