@@ -57,8 +57,6 @@
     </div>
     </section>
 
-<hr>
-
     <!-- Sản phẩm nổi bật -->
     <section class="featured-products">
         <h2>Sản phẩm nổi bật</h2>
@@ -101,8 +99,6 @@
             </div>
         </div>
     </section>
-    
-<hr>
 
     <!-- Layer 1: Video giới thiệu -->
     <section id="video" class="section video"
@@ -117,44 +113,52 @@
         </div>
     </section>
 
-<hr>
-
     <!-- Layer 3: Liên hệ -->
     <section id="contact" class="section contact" style="background-color: #9C5E3E; padding: 20px 0;">
-        <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-            <!-- Dòng chứa SUBSCRIBE và biểu tượng -->
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                <h2 style="color: #FFF; font-size: 16px; letter-spacing: 2px; text-align: left; margin: 0;">SUBSCRIBE</h2>
-                <div class="social-icons" style="display: flex; gap: 15px;">
-                    <a href="https://www.facebook.com/profile.php?id=61567345681577" target="_blank">
-                        <img src="icons/icon_facebook.png" alt="Facebook">
-                    </a>
-                    <a href="https://www.instagram.com/tu.herbaltea/" target="_blank">
-                        <img src="icons/icon_instagram.png" alt="Instagram">
-                    </a>
-                    <a href="https://www.tiktok.com/@tiemtratu?_t=8s43l4otbow&_r=1" target="_blank">
-                        <img src="icons/icon_tiktok.png" alt="TikTok">
-                    </a>
-                    <a href="https://open.spotify.com/show/0xkfu5KbQCVpe0kBrN2hML?si=3WmII6nZQ5--ILRDCnot8Q&nd=1&dlsi=f5dc0e18011a487c" target="_blank">
-                        <img src="icons/icon_spotify.png" alt="Spotify">
-                    </a>
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <!-- Flex container chính -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <!-- Cột trái: Subscribe, biểu tượng và mô tả -->
+                <div style="flex: 1; min-width: 250px;">
+                    <!-- Dòng chứa SUBSCRIBE và biểu tượng -->
+                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                        <h2 style="color: #FFF; font-size: 16px; letter-spacing: 2px; margin: 0;">SUBSCRIBE</h2>
+                        <div class="social-icons" style="display: flex; gap: 10px; margin-left: 20px;">
+                            <a href="https://www.facebook.com/profile.php?id=61567345681577" target="_blank">
+                                <img src="icons/icon_facebook.png" alt="Facebook" style="width: 24px; height: 24px;">
+                            </a>
+                            <a href="https://www.instagram.com/tu.herbaltea/" target="_blank">
+                                <img src="icons/icon_instagram.png" alt="Instagram" style="width: 24px; height: 24px;">
+                            </a>
+                            <a href="https://www.tiktok.com/@tiemtratu?_t=8s43l4otbow&_r=1" target="_blank">
+                                <img src="icons/icon_tiktok.png" alt="TikTok" style="width: 24px; height: 24px;">
+                            </a>
+                            <a href="https://open.spotify.com/show/0xkfu5KbQCVpe0kBrN2hML?si=3WmII6nZQ5--ILRDCnot8Q&nd=1&dlsi=f5dc0e18011a487c" target="_blank">
+                                <img src="icons/icon_spotify.png" alt="Spotify" style="width: 24px; height: 24px;">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Dòng mô tả -->
+                    <p style="color: #FFF; font-size: 18px; margin: 0; text-align: left;">
+                        Be the first to know about new collections & exclusive offers.
+                    </p>
+                </div>
+
+                <!-- Cột phải: Form nhập email -->
+                <div style="flex: 1; min-width: 300px;">
+                    <form action="#" method="post" style="display: flex; align-items: center;">
+                        <input type="email" placeholder="Nhập email của bạn" 
+                            style="border: none; padding: 15px; width: 100%; border-radius: 4px 0 0 4px; outline: none; font-size: 16px;">
+                        <button type="submit" 
+                            style="background-color: #f4b70d; color: #FFF; border: none; padding: 15px 20px; font-weight: bold; font-size: 16px; border-radius: 0 4px 4px 0; cursor: pointer;">
+                            ĐĂNG KÝ
+                        </button>
+                    </form>
                 </div>
             </div>
-            <!-- Dòng mô tả -->
-            <p style="color: #FFF; font-size: 18px; margin-bottom: 20px; text-align: left;">
-                Be the first to know about new collections & exclusive offers.
-            </p>
-            <!-- Form nhập email -->
-            <form action="#" method="post" style="display: flex;">
-                <input type="email" placeholder="Nhập email của bạn" 
-                    style="border: none; padding: 15px; width: 1000px; max-width: 80%; border-radius: 4px 0 0 4px; outline: none; font-size: 16px;">
-                <button type="submit" 
-                        style="background-color: #f4b70d; color: #FFF; border: none; padding: 15px 20px; font-weight: bold; font-size: 16px; border-radius: 0 4px 4px 0; cursor: pointer;">
-                    THEO DÕI
-                </button>
-            </form>
         </div>
     </section>
+
 
     <footer>
         <p>&copy; 2024 Trà thảo mộc - Quà tặng từ thiên nhiên.</p>
