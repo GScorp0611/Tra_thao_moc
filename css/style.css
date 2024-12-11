@@ -66,36 +66,37 @@ button, a {
     margin-top: 30px;
 }
 
-.search-container {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 500px;
-    margin: 0 auto;
+#search-container {
+    display: flex;
+    justify-content: flex-end; /* Đưa thanh tìm kiếm sang bên phải */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    width: 100%; /* Đảm bảo thanh tìm kiếm chiếm hết chiều rộng */
+    padding: 10px; /* Tạo khoảng cách */
 }
 
 #search-input {
     padding: 10px;
-    width: 80%;
+    width: 350px; /* Tăng độ dài khung input */
     font-size: 1rem;
     border: 2px solid #ddd;
     border-radius: 5px;
-    margin-right: 10px;
+    margin-right: 0; /* Xóa khoảng cách bên phải nếu không cần */
 }
 
 #search-btn {
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: #f4b70d;
     color: white;
     border: none;
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+
 #search-btn:hover {
-    background-color: #218838;
+    background-color: #f4b70d;
 }
 
 .product-list {
@@ -363,3 +364,6 @@ section p {
     padding: 0 20px;  /* Thêm khoảng cách cho 2 bên */
     line-height: 1.8;
 }
+
+
+
