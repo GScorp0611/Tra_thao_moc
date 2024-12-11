@@ -1,55 +1,369 @@
-/* Phần chính của bài viết */
-main {
-    width: 70%;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.blog-post header {
+/* Body & Global styles */
+body {
+    font-family: 'Fraunces', sans-serif;
+    line-height: 1.6;
+    color: #FFF;
+    background-color: #FAF6E3;  /* Màu nền của trang web thành trắng */
+}
+
+nav {
+    background-color: #000;  /* Màu của thanh navbar thành đen */
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+section {
+    padding: 60px 0;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-/* Design tiêu đề */
-.blog-post h1.centered {
-    text-align: center;  /* Căn giữa tiêu đề */
-    font-size: 25px;
-    margin-bottom: 10px;
-    color: #000;
-    font-family: Fraunces, serif;
+h1, h2 {
+    font-size: 36px;
+    color: #fff;
 }
 
-.blog-post .date {
-    font-size: 14px;
-    color: #000;
-    text-align: center;  /* Căn giữa ngày đăng */
+button, a {
+    background-color: #f4b70d;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#search {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#search-container {
+    display: flex;
+    justify-content: flex-end; /* Đưa thanh tìm kiếm sang bên phải */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    width: 100%; /* Đảm bảo thanh tìm kiếm chiếm hết chiều rộng */
+    padding: 10px; /* Tạo khoảng cách */
+}
+
+#search-input {
+    padding: 10px;
+    width: 350px; /* Tăng độ dài khung input */
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-right: 0; /* Xóa khoảng cách bên phải nếu không cần */
+}
+
+#search-btn {
+    padding: 10px 20px;
+    background-color: #f4b70d;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
     font-family: 'Times New Roman', Times, serif;
 }
 
-/* Design content */
-.blog-post .content {
-    text-align: left;  /* Căn lề trái cho phần nội dung */
-    font-family: 'Times New Roman', Times, serif; /* font chữ */
+
+#search-btn:hover {
+    background-color: #f4b70d;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.product {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
     color: #000;
 }
 
-.blog-post .content h2 {
-    font-size: 24px;
+.product p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.product button {
+    background-color: #f4b70d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #f4b70d;
+}
+
+
+.blog-posts {
+    display: grid; /* Sử dụng CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* Chia thành 3 cột bằng nhau */
+    gap: 20px; /* Khoảng cách giữa các cột và hàng */
+}
+
+.post {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+form input, form textarea {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    width: 60%;
+    padding: 15px;
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 1px;
+}
+
+footer {
+    background-color: #2f1305;
+    color: #FFF;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Section sản phẩm nổi bật */
+.featured-products {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #9c5e3e;
+}
+
+.featured-products h2 {
+    font-size: 2em;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+/* Grid layout cho sản phẩm */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     margin-top: 20px;
-    color: #000;
 }
 
-.blog-post .content ul {
-    list-style: disc;
-    padding-left: 20px;
+/* Thẻ sản phẩm */
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.blog-post .content p {
-    font-size: 16px;
-    color: #000;
-    margin-bottom: 15px;
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
+
+.product-card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 1em;
+    color: #555;
+    margin: 10px 0;
+}
+
+.product-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card a:hover {
+    background-color: #0056b3;
+}
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Thẻ icons */
+.social-icons a img {
+    background: none; /* Xóa phông nền */
+    display: block; /* Xóa khoảng trống không mong muốn */
+    width: 40px; /* Đặt kích thước cố định */
+    height: 40px;
+    object-fit: contain; /* Hiển thị đúng kích thước ảnh */
+}
+
+.social-icons a {
+    background: none; /* Xóa nền từ thẻ a nếu có */
+    padding: 0; /* Xóa khoảng cách thừa */
+    display: inline-block;
+}
+
+
+.social-icons a img {
+    background: none; /* Xóa phông nền */
+    display: block; /* Xóa khoảng trống không mong muốn */
+    width: 40px; /* Đặt kích thước cố định */
+    height: 40px;
+    object-fit: contain; /* Hiển thị đúng kích thước ảnh */
+}
+
+.social-icons a {
+    background: none; /* Xóa nền từ thẻ a nếu có */
+    padding: 0; /* Xóa khoảng cách thừa */
+    display: inline-block;
+}
+
+/* style icon */
+a {
+    outline: none;
+    border: none;
+}
+
+a img {
+    display: block; /* Đảm bảo không có khoảng trống xung quanh */
+}
+
+/* Container - Giao diện chia đôi */
+.container {
+    display: flex; /* Sử dụng Flexbox */
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-section {
+    flex: 1; /* Chiếm một nửa */
+    background-size: cover;
+    min-height: 400px;
+}
+
+.content-section {
+    flex: 1; /* Chiếm một nửa */
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.content-section h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.content-section h3 {
+    margin-top: 15px;
+    color: #27ae60;
+}
+
+.content-section p, .content-section ul li {
+    line-height: 1.6;
+    color: #555;
+}
+
+ul {
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+/* Thêm CSS cho phần Our Story */
+section {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 35px;
+    color: #f4b70d;
+}
+
+section p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    max-width: 720px; /* Giới hạn chiều rộng của đoạn văn */
+    margin: 0 auto;   /* Căn giữa nội dung */
+    padding: 0 20px;  /* Thêm khoảng cách cho 2 bên */
+    line-height: 1.8;
+}
+
+
 
