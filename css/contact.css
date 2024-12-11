@@ -89,6 +89,7 @@ body {
     padding: 20px;
     overflow-x: auto;
     font-family: 'Times New Roman', Times, serif;
+    margin-right: -150px;
 }
 
 .table-container table {
@@ -123,6 +124,7 @@ body {
     text-align: center;
     margin-top: 20px;
     margin-left: 100px;
+    margin-right: -100px;
 }
 
 .video-container video {
