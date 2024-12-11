@@ -9,10 +9,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #FFF;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Bg4.png') no-repeat center center/cover;
 }
-
 
 .container {
     display: flex;
@@ -26,7 +23,7 @@ body {
 .contact-form {
     flex: 1;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(182, 29, 29, 0.1);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     color: rgb(12, 11, 11);
