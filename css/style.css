@@ -339,3 +339,27 @@ ul {
     margin: 10px 0;
     padding: 0 20px;
 }
+
+/* Thêm CSS cho phần Our Story */
+section {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 35px;
+    color: #f4b70d;
+}
+
+section p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    max-width: 720px; /* Giới hạn chiều rộng của đoạn văn */
+    margin: 0 auto;   /* Căn giữa nội dung */
+    padding: 0 20px;  /* Thêm khoảng cách cho 2 bên */
+    line-height: 1.8;
+}
