@@ -9,9 +9,10 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #000;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('img/Bg4.png') no-repeat center center/cover;
+    color: #FFF;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/Bg4.png') no-repeat center center/cover;
 }
+
 
 .container {
     display: flex;
@@ -91,7 +92,7 @@ body {
 }
 
 .table-container table {
-    width: 100%;
+    width: 150%;
     border-collapse: collapse;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -119,10 +120,21 @@ body {
 
 /* Video Section */
 .video-container {
-    flex: 1;
     text-align: center;
     margin-top: 20px;
+    margin-left: 100px;
 }
+
+.video-container video {
+    width: 60%; /* Video chiếm 90% chiều rộng container */
+    max-width: 600px; /* Giới hạn chiều rộng tối đa là 600px */
+    height: auto; /* Giữ tỉ lệ của video */
+    border-radius: 10px; /* Bo góc */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    display: block;
+    margin: 0 auto; /* Căn giữa video */
+}
+
 
 .video-container img {
     max-width: 100%;
