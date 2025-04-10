@@ -1,4 +1,4 @@
-// Thay config của bạn vào đây
+// Firebase - Config
 const firebaseConfig = {
   apiKey: "AIzaSyD_jpUv4SaktjNOUVuMasdfgrq9mjRVgRQ",
   authDomain: "tra-thao-moc.firebaseapp.com",
@@ -9,5 +9,5 @@ const firebaseConfig = {
   appId: "1:899447552649:web:9d666dc3af63ac749ba458"
 };
 
-const app = initializeApp(firebaseConfig);
-const database = getDatabase();
+firebase.initializeApp(firebaseConfig);
+const database = firebase.database();
