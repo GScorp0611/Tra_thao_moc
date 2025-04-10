@@ -1,58 +1,28 @@
-<h1>Quản lý sản phẩm</h1>
-<input type="text" id="name" placeholder="Tên sản phẩm">
-<input type="number" id="price" placeholder="Giá">
-<button onclick="addProduct()">Thêm sản phẩm</button>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý sản phẩm</title>
+</head>
+<body>
 
-<h2>Danh sách sản phẩm</h2>
-<div id="product-list"></div>
+  <h1>Quản lý sản phẩm</h1>
 
-<form id="product-form">
-  <input type="text" id="name" placeholder="Tên sản phẩm" required>
-  <input type="number" id="price" placeholder="Giá" required>
-  <button type="submit">Thêm sản phẩm</button>
-</form>
+  <!-- Form thêm sản phẩm -->
+  <form id="product-form">
+    <input type="text" id="name" placeholder="Tên sản phẩm" required>
+    <input type="number" id="price" placeholder="Giá" required>
+    <button type="submit">Thêm sản phẩm</button>
+  </form>
 
-<div id="product-list"></div>
+  <h2>Danh sách sản phẩm</h2>
 
-<script src="admin.js"></script>
-<script>
-  const nameInput = document.getElementById('name');
-  const priceInput = document.getElementById('price');
-  const productList = document.getElementById('product-list');
+  <!-- Hiển thị sản phẩm -->
+  <div id="product-list"></div>
 
-  function addProduct() {
-    const name = nameInput.value;
-    const price = parseFloat(priceInput.value);
+  <!-- Kết nối file JS -->
+  <script src="admin.js"></script>
 
-    if (name && price) {
-      db.collection("products").add({
-        name: name,
-        price: price
-      }).then(() => {
-        alert('Thêm sản phẩm thành công!');
-        nameInput.value = '';
-        priceInput.value = '';
-        loadProducts();
-      });
-    } else {
-      alert('Vui lòng nhập đầy đủ thông tin!');
-    }
-  }
-
-  // Load sản phẩm từ Firestore
-  function loadProducts() {
-    productList.innerHTML = '';
-    db.collection("products").get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        const data = doc.data();
-        productList.innerHTML += `
-          <div>
-            ${data.name} - ${data.price}đ
-          </div>
-        `;
-      });
-    });
-  }
-
-  loadProducts();
-</script>
+</body>
+</html>
