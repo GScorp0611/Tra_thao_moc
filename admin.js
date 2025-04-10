@@ -1,8 +1,10 @@
-// admin.js
+// Kết nối Firestore
+const db = firebase.firestore();
 
 const productList = document.getElementById('product-list');
 const productForm = document.getElementById('product-form');
 
+// Load danh sách sản phẩm
 async function renderProducts() {
   productList.innerHTML = '';
   const snapshot = await db.collection('products').get();
@@ -18,19 +20,29 @@ async function renderProducts() {
   });
 }
 
+// Thêm sản phẩm
 productForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const name = productForm['name'].value;
-  const price = productForm['price'].value;
+  const price = parseFloat(productForm['price'].value);
 
-  await db.collection('products').add({ name, price });
-  productForm.reset();
-  renderProducts();
+  if (name && price) {
+    await db.collection('products').add({ name, price });
+    alert('Thêm sản phẩm thành công!');
+    productForm.reset();
+    renderProducts();
+  } else {
+    alert('Vui lòng nhập đầy đủ thông tin!');
+  }
 });
 
+// Xoá sản phẩm
 async function deleteProduct(id) {
-  await db.collection('products').doc(id).delete();
-  renderProducts();
+  const confirmDelete = confirm('Bạn có chắc chắn muốn xoá sản phẩm này?');
+  if (confirmDelete) {
+    await db.collection('products').doc(id).delete();
+    renderProducts();
+  }
 }
 
 renderProducts();
