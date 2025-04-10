@@ -39,11 +39,47 @@
 
     <!-- Sản phẩm -->
     <section id="products" class="section products">
-    <h2 style="color: #000;">Các sản phẩm của chúng tôi</h2>
-    <div class="product-list" id="product-list">
-        <!-- Sản phẩm sẽ được render ở đây bằng JavaScript -->
-    </div>
+        <h2 style="color: #000;">Các sản phẩm của chúng tôi</h2>
+        <div class="product-list" id="product-list">
+            <!-- Sản phẩm sẽ được render ở đây bằng JavaScript -->
+        </div>
     </section>
+    
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+        import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    
+        const firebaseConfig = {
+            apiKey: "API_KEY",
+            authDomain: "PROJECT_ID.firebaseapp.com",
+            projectId: "PROJECT_ID",
+            storageBucket: "PROJECT_ID.appspot.com",
+            messagingSenderId: "SENDER_ID",
+            appId: "APP_ID"
+        };
+    
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+    
+        async function loadProducts() {
+            const productList = document.getElementById('product-list');
+            const querySnapshot = await getDocs(collection(db, "products"));
+    
+            querySnapshot.forEach((doc) => {
+                const product = doc.data();
+                productList.innerHTML += `
+                    <div class="product">
+                        <img src="${product.image}" alt="${product.name}">
+                        <h3>${product.name}</h3>
+                        <p>${product.price}</p>
+                        <button><b>Mua ngay</b></button>
+                    </div>
+                `;
+            });
+        }
+    
+        loadProducts();
+    </script>
 
     <footer style="background-color: #000; color: #FFF; padding: 20px 0; font-family: Arial, sans-serif;">
         <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
