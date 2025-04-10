@@ -9,3 +9,44 @@
 <div id="product-list"></div>
 
 <script src="admin.js"></script>
+<script>
+  const nameInput = document.getElementById('name');
+  const priceInput = document.getElementById('price');
+  const productList = document.getElementById('product-list');
+
+  function addProduct() {
+    const name = nameInput.value;
+    const price = parseFloat(priceInput.value);
+
+    if (name && price) {
+      db.collection("products").add({
+        name: name,
+        price: price
+      }).then(() => {
+        alert('Thêm sản phẩm thành công!');
+        nameInput.value = '';
+        priceInput.value = '';
+        loadProducts();
+      });
+    } else {
+      alert('Vui lòng nhập đầy đủ thông tin!');
+    }
+  }
+
+  // Load sản phẩm từ Firestore
+  function loadProducts() {
+    productList.innerHTML = '';
+    db.collection("products").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        productList.innerHTML += `
+          <div>
+            ${data.name} - ${data.price}đ
+          </div>
+        `;
+      });
+    });
+  }
+
+  loadProducts();
+</script>
