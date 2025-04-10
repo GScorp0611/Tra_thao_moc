@@ -1,7 +1,4 @@
 // Thay config của bạn vào đây
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
-
 const firebaseConfig = {
   apiKey: "AIzaSyD_jpUv4SaktjNOUVuMasdfgrq9mjRVgRQ",
   authDomain: "tra-thao-moc.firebaseapp.com",
