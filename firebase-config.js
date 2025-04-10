@@ -1,4 +1,4 @@
-// Thay config của bạn vào đây
+// Config firebase
 const firebaseConfig = {
   apiKey: "AIzaSyD_jpUv4SaktjNOUVuMasdfgrq9mjRVgRQ",
   authDomain: "tra-thao-moc.firebaseapp.com",
