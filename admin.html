@@ -1,32 +1,21 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <title>Trang Quản lý Sản phẩm</title>
-  <link rel="stylesheet" href="css/admin-style.css">
-
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-</head>
-
-<body>
-  <div class="container">
-    <h1>Quản lý Sản phẩm</h1>
-
-    <div class="form-add">
-      <h2>Thêm Sản phẩm mới</h2>
-      <input type="text" id="productName" placeholder="Tên sản phẩm">
-      <input type="text" id="productImage" placeholder="Link ảnh">
-      <input type="number" id="productPrice" placeholder="Giá (VNĐ)">
-      <button onclick="addProduct()">Thêm Sản phẩm</button>
+<div class="container">
+  <h1>Quản lý Sản Phẩm</h1>
+  <div class="row">
+    <div class="col-left">
+      <h2>Thêm sản phẩm</h2>
+      <div class="form-add">
+        <input type="text" id="productName" placeholder="Tên sản phẩm">
+        <input type="text" id="productImage" placeholder="Link ảnh">
+        <input type="text" id="productPrice" placeholder="Giá">
+        <button onclick="addProduct()">Thêm sản phẩm</button>
+      </div>
     </div>
 
-    <h2>Danh sách Sản phẩm</h2>
-    <div id="productList" class="product-list"></div>
+    <div class="col-right">
+      <h2>Danh sách sản phẩm</h2>
+      <div id="productList" class="product-list">
+        <!-- Load sản phẩm ở đây -->
+      </div>
+    </div>
   </div>
-
-  <script src="firebase-config.js"></script>
-  <script src="js/admin.js"></script>
-</body>
-</html>
+</div>
