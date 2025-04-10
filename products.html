@@ -38,49 +38,26 @@
     </div>
 
     <!-- Sản phẩm -->
-    <section id="products" class="section products">
-        <h2 style="color: #000;">Các sản phẩm của chúng tôi</h2>
-        <div class="product-list" id="product-list">
-            <!-- Sản phẩm sẽ được render ở đây bằng JavaScript -->
-        </div>
-    </section>
+    <h1>Quản lý Sản phẩm</h1>
     
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-        import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    <h2>Thêm Sản phẩm mới</h2>
+    <input type="text" id="productName" placeholder="Tên sản phẩm"><br><br>
+    <input type="text" id="productImage" placeholder="Link ảnh"><br><br>
+    <input type="number" id="productPrice" placeholder="Giá (VNĐ)"><br><br>
+    <button onclick="addProduct()">Thêm sản phẩm</button>
     
-        const firebaseConfig = {
-          apiKey: "AIzaSyD_jpUv4SaktjNOUVuMasdfgrq9mjRVgRQ",
-          authDomain: "tra-thao-moc.firebaseapp.com",
-          databaseURL: "https://tra-thao-moc-default-rtdb.asia-southeast1.firebasedatabase.app/",
-          projectId: "tra-thao-moc",
-          storageBucket: "tra-thao-moc.firebasestorage.app",
-          messagingSenderId: "899447552649",
-          appId: "1:899447552649:web:9d666dc3af63ac749ba458"
-        };
+    <h2>Danh sách Sản phẩm</h2>
+    <div id="productList"></div>
     
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
     
-        async function loadProducts() {
-            const productList = document.getElementById('product-list');
-            const querySnapshot = await getDocs(collection(db, "products"));
+    <!-- File cấu hình Firebase -->
+    <script src="./firebase-config.js"></script>
     
-            querySnapshot.forEach((doc) => {
-                const product = doc.data();
-                productList.innerHTML += `
-                    <div class="product">
-                        <img src="${product.image}" alt="${product.name}">
-                        <h3>${product.name}</h3>
-                        <p>${product.price}</p>
-                        <button><b>Mua ngay</b></button>
-                    </div>
-                `;
-            });
-        }
-    
-        loadProducts();
-    </script>
+    <!-- File xử lý CRUD -->
+    <script src="./admin.js"></script>
 
     <footer style="background-color: #000; color: #FFF; padding: 20px 0; font-family: Arial, sans-serif;">
         <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
