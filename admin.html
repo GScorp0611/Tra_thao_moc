@@ -1,6 +1,18 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
 <div class="container">
   <h1>Quản lý Sản Phẩm</h1>
+
   <div class="row">
+    <!-- Form thêm sản phẩm -->
     <div class="col-left">
       <h2>Thêm sản phẩm</h2>
       <div class="form-add">
@@ -11,11 +23,17 @@
       </div>
     </div>
 
+    <!-- Danh sách sản phẩm -->
     <div class="col-right">
       <h2>Danh sách sản phẩm</h2>
       <div id="productList" class="product-list">
-        <!-- Load sản phẩm ở đây -->
+        <!-- Sản phẩm sẽ được load ở đây -->
       </div>
     </div>
   </div>
+
 </div>
+
+<script src="admin.js"></script>
+</body>
+</html>
